@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color);
+    height: 100vh;
+    font-family: 'Inconsolata', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:root {
+    --bg-color: linear-gradient(186deg, rgba(10,191,83,1) 0%, rgba(0,17,44,1) 100%);
+    --primary-color: #00112c;
+    --secondary-color: #0abf53;
+}
+
+.container {
+    background: var(--primary-color);
+    padding: 3rem 2rem;
+    margin: 1rem 2rem;
+    border: 3px solid #f2f2ff;
+    border-radius: 1.5rem;
+}
+
+.output {
+    background: #f2f2ff;
+    border: 0;
+    margin-bottom: 1rem;
+    padding: .5rem 1rem;
+    text-align: end;
+    width: 100%;
+    border-radius: .5rem;
+    color: var(--primary-color);
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    text-align: center;
+   
+    gap: 1rem;
+}
+
+.key,
+.ac,
+.del,
+.dot,
+.equal {
+    font-size: 1.85rem;
+    color: var(--secondary-color);
+    padding: .5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+.key:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+.ac {
+    background: #ed1b2e;
+    color: #fff;
+    border: 0;
+    font-size: 1.25rem;
+}
+.ac:hover {
+    background: #c9162d;
+}
+
+.del {
+    background: #9f9fa3;
+    border: 0;
+    color: #000;
+    font-size: 1.25rem;
+}
+.del:hover {
+    background: #8c8d8f;
+}
+.zero {
+    grid-column: 1 / 3;
+}
+
+.equal {
+    background: #0abf53;
+    color: #00112c;
+    grid-row:  6 / 4;
+    grid-column: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;    
+}
+.equal:hover {
+    background: #0a9e46;
+}
